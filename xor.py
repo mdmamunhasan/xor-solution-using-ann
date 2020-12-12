@@ -24,3 +24,6 @@ for i in range(10000):
     Loss.append(loss)
 
 print(Loss[-1])
+plt.figure()
+plt.plot(Loss)
+plt.show()
