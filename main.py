@@ -108,14 +108,15 @@ def update_parameters(parameters, grads, learning_rate):
     return parameters
 
 
-def evaluate_performance(X, Y, parameters, losses):
+def evaluate_performance(X, Y, parameters, losses, plot=False):
     cost, _, A2 = forward_propagation(X, Y, parameters)
     pred = (A2 > 0.5) * 1.0
-    print(A2)
-    print(pred)
-    plt.figure()
-    plt.plot(losses)
-    plt.show()
+    print("Activation Output", A2)
+    print("Final Prediction", pred)
+    if plot:
+        plt.figure()
+        plt.plot(losses)
+        plt.show()
 
 
 def main():
@@ -136,11 +137,19 @@ def main():
     learning_rate = 0.01
     losses = np.zeros((num_iterations, 1))
 
+    print("Expected Output", Y)
+
+    print("Performance before training:")
+    evaluate_performance(X, Y, parameters, losses)
+
+    print("Train the Network...")
     for i in range(num_iterations):
         losses[i, 0], cache, A2 = forward_propagation(X, Y, parameters)
         grads = backward_propagation(X, Y, cache)
         parameters = update_parameters(parameters, grads, learning_rate)
+    print(f"Training completed with {num_iterations} epochs")
 
+    print("Performance after training:")
     evaluate_performance(X, Y, parameters, losses)
 
 
