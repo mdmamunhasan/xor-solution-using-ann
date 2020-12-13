@@ -3,7 +3,7 @@
 XOR gate solution using Artificial Neural Network
 
 ```
-    python main.py
+python main.py
 ```
 
 Output
@@ -19,3 +19,5 @@ Performance after training:
 Activation Output [[0.01560739 0.98354081 0.98601356 0.01325203]]
 Final Prediction [[0. 1. 1. 0.]]
 ```
+
+
