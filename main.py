@@ -137,6 +137,7 @@ def main():
     learning_rate = 0.01
     losses = np.zeros((num_iterations, 1))
 
+    print("Given Input", X)
     print("Expected Output", Y)
 
     print("Performance before training:")
