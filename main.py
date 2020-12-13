@@ -111,7 +111,7 @@ def update_parameters(parameters, grads, learning_rate):
 def evaluate_performance(X, Y, parameters, losses, plot=False):
     cost, _, A2 = forward_propagation(X, Y, parameters)
     pred = (A2 > 0.5) * 1.0
-    print("Activation Output", A2)
+    print("Forward Output", A2)
     print("Final Prediction", pred)
     if plot:
         plt.figure()
