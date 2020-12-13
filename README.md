@@ -1,6 +1,12 @@
 # xor-solution-using-ann
 
-XOR gate solution using Artificial Neural Network
+XOR gate solution using Artificial Neural Network.
+
+Input
+
+```
+[[0, 0, 1, 1], [0, 1, 0, 1]]
+```
 
 ```
 python main.py
